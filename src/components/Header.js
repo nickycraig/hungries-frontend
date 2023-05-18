@@ -1,6 +1,14 @@
+import { Link } from 'react-router-dom';
+
 function Header () {
     return(
-        <h2>This is my header component</h2>
+        <>
+            <nav>
+                <Link to='/'>Home</Link>
+                <Link to='/recipes'>Recipes</Link>
+            </nav>
+            <h1>Hungry Guys Recipe File</h1>
+        </>
     )
 }
 
