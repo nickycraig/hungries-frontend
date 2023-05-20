@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 function RecipeShow () {
     const [ recipe, setRecipe ] = useState(null);
@@ -21,9 +22,18 @@ function RecipeShow () {
             <>
                 <h2>{recipe.name}</h2>
                 <h4>({recipe.cuisine.join(', ')})</h4>
-                <img src={recipe.image} alt='recipe photo' />
-                <p>Comments: {recipe.comments}</p>
+                <img src={recipe.image} alt='recipe' />
+                <h4>Comments:</h4>
+                <p>{recipe.comments}</p>
                 <a href={recipe.recipeLink}>Link to full recipe</a>
+                <br/>
+                <br/>
+                <Link to={`/recipes/${recipeId}/edit`}>
+                    <button>Edit Recipe</button>
+                </Link>
+                <Link to={`/recipes/${recipeId}/delete`}>
+                    <button>Delete Recipe</button>
+                </Link>
             </>
         )
     }
