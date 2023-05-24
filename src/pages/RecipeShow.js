@@ -8,7 +8,7 @@ function RecipeShow () {
     console.log(recipeId);
     async function getRecipe() {
         try {
-            let myRecipe = await fetch(`http://localhost:3000/recipes/${recipeId}`);
+            let myRecipe = await fetch(`https://hungry-guys.onrender.com/recipes/${recipeId}`);
             myRecipe = await myRecipe.json();
             setRecipe(myRecipe);
         } catch(err) {

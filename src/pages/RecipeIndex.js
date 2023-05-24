@@ -15,9 +15,10 @@ function RecipeIndex () {
 
     async function getRecipes() {
         try {
-            let myRecipes = await fetch('http://localhost:3000/recipes')
+            let myRecipes = await fetch('https://hungry-guys.onrender.com/recipes')
             myRecipes = await myRecipes.json();
             setRecipes(myRecipes);
+            console.log(myRecipes);
         } catch(err) {
             console.log(err);
         }
@@ -26,22 +27,77 @@ function RecipeIndex () {
     useEffect(() => {
         getRecipes();
     }, []);
-
-    console.log(recipes);
+    // console.log(recipes);
+    // console.log(recipes.filter(recipe => recipe.type = "soup"));
 
     function loaded() {
         return(
             <>
-                {recipes.map((recipe, idx) => {
-                        return(
-                            <div key={idx}>
-                                <Link to={`/recipes/${recipe._id}`}>
-                                    <h3>{recipe.name}</h3>
-                                </Link>
-                            </div>
-                        )
-                })}
+            <h2>Soups</h2>
+                {recipes.filter(recipe => recipe.type === "soup").map((recipe, idx) => {
+                    return(
+                        <div key={idx}>
+                            <Link to={`/recipes/${recipe._id}`}>
+                                <h3>{recipe.name}</h3>
+                            </Link>
+                        </div>
+                    )
+                } )}
            
+            <h2>Salads</h2>
+                {recipes.filter(recipe => recipe.type === "salad").map((recipe, idx) => {
+                    return(
+                        <div key={idx}>
+                            <Link to={`/recipes/${recipe._id}`}>
+                                <h3>{recipe.name}</h3>
+                            </Link>
+                        </div>
+                    )
+                } )}
+
+            <h2>Entrees</h2>
+                {recipes.filter(recipe => recipe.type === "entree").map((recipe, idx) => {
+                    return(
+                        <div key={idx}>
+                            <Link to={`/recipes/${recipe._id}`}>
+                                <h3>{recipe.name}</h3>
+                            </Link>
+                        </div>
+                    )
+                } )}
+
+            <h2>Side Dishes</h2>
+                {recipes.filter(recipe => recipe.type === "side dish").map((recipe, idx) => {
+                    return(
+                        <div key={idx}>
+                            <Link to={`/recipes/${recipe._id}`}>
+                                <h3>{recipe.name}</h3>
+                            </Link>
+                        </div>
+                    )
+                } )}
+
+            <h2>Appetizers</h2>
+                {recipes.filter(recipe => recipe.type === "appetizer").map((recipe, idx) => {
+                    return(
+                        <div key={idx}>
+                            <Link to={`/recipes/${recipe._id}`}>
+                                <h3>{recipe.name}</h3>
+                            </Link>
+                        </div>
+                    )
+                } )}
+
+            <h2>Desserts</h2>
+                {recipes.filter(recipe => recipe.type === "dessert").map((recipe, idx) => {
+                    return(
+                        <div key={idx}>
+                            <Link to={`/recipes/${recipe._id}`}>
+                                <h3>{recipe.name}</h3>
+                            </Link>
+                        </div>
+                    )
+                } )}
             </>
         )
     }

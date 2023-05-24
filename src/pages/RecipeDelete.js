@@ -6,7 +6,7 @@ function RecipeDelete() {
 
     async function deleteMyRecipe() {
         try {
-            await fetch(`http://localhost:3000/recipes/${recipeId}`, {
+            await fetch(`https://hungry-guys.onrender.com/recipes/${recipeId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application.json"
