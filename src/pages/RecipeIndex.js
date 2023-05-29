@@ -32,73 +32,80 @@ function RecipeIndex () {
 
     function loaded() {
         return(
-            <>
-            <h2 className='text-2xl'>Soups</h2>
-                {recipes.filter(recipe => recipe.type === "soup").map((recipe, idx) => {
-                    return(
-                        <div key={idx}>
-                            <Link to={`/recipes/${recipe._id}`}>
-                                <h3>{recipe.name}</h3>
-                            </Link>
-                        </div>
-                    )
-                } )}
-           
-            <h2 className='text-2xl'>Salads</h2>
-                {recipes.filter(recipe => recipe.type === "salad").map((recipe, idx) => {
-                    return(
-                        <div key={idx}>
-                            <Link to={`/recipes/${recipe._id}`}>
-                                <h3>{recipe.name}</h3>
-                            </Link>
-                        </div>
-                    )
-                } )}
-
-            <h2 className='text-2xl'>Entrees</h2>
-                {recipes.filter(recipe => recipe.type === "entree").map((recipe, idx) => {
-                    return(
-                        <div key={idx}>
-                            <Link to={`/recipes/${recipe._id}`}>
-                                <h3>{recipe.name}</h3>
-                            </Link>
-                        </div>
-                    )
-                } )}
-
-            <h2 className='text-2xl'>Side Dishes</h2>
-                {recipes.filter(recipe => recipe.type === "side dish").map((recipe, idx) => {
-                    return(
-                        <div key={idx}>
-                            <Link to={`/recipes/${recipe._id}`}>
-                                <h3>{recipe.name}</h3>
-                            </Link>
-                        </div>
-                    )
-                } )}
-
-            <h2 className='text-2xl'>Appetizers</h2>
-                {recipes.filter(recipe => recipe.type === "appetizer").map((recipe, idx) => {
-                    return(
-                        <div key={idx}>
-                            <Link to={`/recipes/${recipe._id}`}>
-                                <h3>{recipe.name}</h3>
-                            </Link>
-                        </div>
-                    )
-                } )}
-
-            <h2 className='text-2xl'>Desserts</h2>
-                {recipes.filter(recipe => recipe.type === "dessert").map((recipe, idx) => {
-                    return(
-                        <div key={idx}>
-                            <Link to={`/recipes/${recipe._id}`}>
-                                <h3>{recipe.name}</h3>
-                            </Link>
-                        </div>
-                    )
-                } )}
-            </>
+            <div class="grid grid-rows-2 grid-flow-col gap-4">
+                <div>
+                    <h2 className='text-2xl'>Soups</h2>
+                        {recipes.filter(recipe => recipe.type === "soup").map((recipe, idx) => {
+                            return(
+                                <div key={idx}>
+                                    <Link to={`/recipes/${recipe._id}`}>
+                                        <h3 class="text-pink-500 text-lg">{recipe.name}</h3>
+                                    </Link>
+                                </div>
+                            )
+                        } )}
+                </div> 
+                <div>
+                    <h2 className='text-2xl'>Salads</h2>
+                        {recipes.filter(recipe => recipe.type === "salad").map((recipe, idx) => {
+                            return(
+                                <div key={idx}>
+                                    <Link to={`/recipes/${recipe._id}`}>
+                                        <h3 class="text-pink-500 text-lg">{recipe.name}</h3>
+                                    </Link>
+                                </div>
+                            )
+                        } )}
+                </div>
+                <div>
+                    <h2 className='text-2xl'>Entrees</h2>
+                        {recipes.filter(recipe => recipe.type === "entree").map((recipe, idx) => {
+                            return(
+                                <div key={idx}>
+                                    <Link to={`/recipes/${recipe._id}`}>
+                                        <h3 class="text-pink-500 text-lg">{recipe.name}</h3>
+                                    </Link>
+                                </div>
+                            )
+                        } )}
+                </div>
+                <div>
+                    <h2 className='text-2xl'>Side Dishes</h2>
+                        {recipes.filter(recipe => recipe.type === "side dish").map((recipe, idx) => {
+                            return(
+                                <div key={idx}>
+                                    <Link to={`/recipes/${recipe._id}`}>
+                                        <h3 class="text-pink-500 text-lg">{recipe.name}</h3>
+                                    </Link>
+                                </div>
+                            )
+                        } )}
+                </div>
+                <div>
+                    <h2 className='text-2xl'>Appetizers</h2>
+                        {recipes.filter(recipe => recipe.type === "appetizer").map((recipe, idx) => {
+                            return(
+                                <div key={idx}>
+                                    <Link to={`/recipes/${recipe._id}`}>
+                                        <h3 class="text-pink-500 text-lg">{recipe.name}</h3>
+                                    </Link>
+                                </div>
+                            )
+                        } )}
+                </div>
+                <div>
+                    <h2 className='text-2xl'>Desserts</h2>
+                        {recipes.filter(recipe => recipe.type === "dessert").map((recipe, idx) => {
+                            return(
+                                <div key={idx}>
+                                    <Link to={`/recipes/${recipe._id}`}>
+                                        <h3 class="text-pink-500 text-lg">{recipe.name}</h3>
+                                    </Link>
+                                </div>
+                            )
+                        } )}             
+                </div>
+            </div>
         )
     }
 
@@ -132,8 +139,9 @@ function RecipeIndex () {
   <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
       <div class="lg:col-span-2 lg:py-12">
-        <p class="max-w-xl text-lg">
-          Use the form to add a new recipe to feed your Hungry Guys. Be sure to include some notes in the comments section: what you liked, what you changed or modified, etc. Let's eat!
+        <p class="max-w-xl text-xl">
+          Use the form to add a new recipe to feed your Hungry Guys. Be sure to include some notes in the comments section: what you liked, what you changed or modified, etc. 
+           Let's eat!
         </p>
       </div>
 

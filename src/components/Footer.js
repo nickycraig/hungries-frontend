@@ -1,6 +1,6 @@
 function Footer () {
     return(
-        <h3>❤ I love feeding my hungry guys... ❤</h3>
+        <h3 class='mt-20'>❤ I love feeding my hungry guys... ❤</h3>
     )
 }
 

@@ -20,20 +20,38 @@ function RecipeShow () {
     function recipeLoaded() {
         return(
             <>
-                <h2>{recipe.name}</h2>
-                <h4>({recipe.cuisine.join(', ')})</h4>
-                <img src={recipe.image} alt='recipe' />
-                <h4>Comments:</h4>
-                <p>{recipe.comments}</p>
-                <a href={recipe.recipeLink}>Link to full recipe</a>
-                <br/>
-                <br/>
-                <Link to={`/recipes/${recipeId}/edit`}>
-                    <button>Edit Recipe</button>
-                </Link>
-                <Link to={`/recipes/${recipeId}/delete`}>
-                    <button>Delete Recipe</button>
-                </Link>
+                <h1 className="text-3xl">{recipe.name}</h1>
+                <h4 class='text-xl mb-4'>({recipe.cuisine.join(', ')})</h4>
+                <div className="flex flex-row justify-center">
+                    <div>
+                        <img src={recipe.image} alt='recipe' />
+                    </div>
+                    <div class='pl-4'>
+                        <h4 class='text-2xl mb-2 mt-8'>Comments:</h4>
+                        <p class='text-lg mb-4'>{recipe.comments}</p>
+                        <div class='mb-10 text-pink-500'>
+                            <a href={recipe.recipeLink}>Link to full recipe</a>
+                        </div>
+                        <div class="flex space-x-12 justify-center">
+                            <div>
+                                <Link to={`/recipes/${recipeId}/edit`}>
+                                    <button 
+                                    type="submit"
+                                    class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto">
+                                    Edit Recipe</button>
+                                </Link>
+                            </div>
+                            <div>
+                                <Link to={`/recipes/${recipeId}/delete`}>
+                                    <button 
+                                    type="submit"
+                                    class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto">
+                                    Delete Recipe</button>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </>
         )
     }
