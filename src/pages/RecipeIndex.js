@@ -27,9 +27,7 @@ function RecipeIndex () {
     useEffect(() => {
         getRecipes();
     }, []);
-    // console.log(recipes);
-    // console.log(recipes.filter(recipe => recipe.type = "soup"));
-
+  
     function loaded() {
         return(
             <div class="grid grid-rows-2 grid-flow-col gap-4">
@@ -116,7 +114,7 @@ function RecipeIndex () {
             [e.target.name]: e.target.value
         }))
     }
-    // console.log(recipeForm);
+    
     async function handleSubmit(e) {
         try {
             e.preventDefault();

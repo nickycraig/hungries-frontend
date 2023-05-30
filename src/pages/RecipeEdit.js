@@ -6,20 +6,21 @@ function RecipeEdit() {
     const { recipeId } = useParams();
     const [recipe, setRecipe] = useState(null);
     const navigate = useNavigate();
-    async function getRecipe() {
-        try {
-            let myRecipe = await fetch(`https://hungry-guys.onrender.com/recipes/${recipeId}`);
-            myRecipe = await myRecipe.json();
-            setRecipe(myRecipe);
-            console.log(myRecipe);
-        } catch(err) {
-            console.log(err);
-        }
-    }
+   
 
     useEffect(() => {
+        async function getRecipe() {
+            try {
+                let myRecipe = await fetch(`https://hungry-guys.onrender.com/recipes/${recipeId}`);
+                myRecipe = await myRecipe.json();
+                setRecipe(myRecipe);
+                console.log(myRecipe);
+            } catch(err) {
+                console.log(err);
+            }
+        }
         getRecipe();
-    }, []);
+    }, [recipeId]);
     
     function handleChange(e) {
         setRecipe((currentState) => ({
