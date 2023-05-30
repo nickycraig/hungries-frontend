@@ -5,22 +5,14 @@ import { Link } from "react-router-dom";
 function RecipeShow () {
     const [ recipe, setRecipe ] = useState(null);
     const { recipeId } = useParams();
-    console.log(recipeId);
-    async function getRecipe() {
-        try {
-            let myRecipe = await fetch(`https://hungry-guys.onrender.com/recipes/${recipeId}`);
-            myRecipe = await myRecipe.json();
-            setRecipe(myRecipe);
-        } catch(err) {
-            console.log(err);
-        }
-    }
+    // console.log(recipeId);
+    
     console.log(recipe);
 
     function recipeLoaded() {
         return(
             <>
-                <h1 className="text-3xl">{recipe.name}</h1>
+                <h1 className="text-3xl mt-4">{recipe.name}</h1>
                 <h4 class='text-xl mb-4'>({recipe.cuisine.join(', ')})</h4>
                 <div className="flex flex-row justify-center">
                     <div>
@@ -57,8 +49,17 @@ function RecipeShow () {
     }
 
     useEffect(() => {
+        async function getRecipe() {
+            try {
+                let myRecipe = await fetch(`https://hungry-guys.onrender.com/recipes/${recipeId}`);
+                myRecipe = await myRecipe.json();
+                setRecipe(myRecipe);
+            } catch(err) {
+                console.log(err);
+            }
+        }
         getRecipe();
-    }, []);
+    }, [recipeId]);
 
     return(
         <>

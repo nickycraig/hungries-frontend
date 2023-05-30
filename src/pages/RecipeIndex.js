@@ -136,14 +136,13 @@ function RecipeIndex () {
 
     return(
         <section class="bg-gray-100">
-  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
-      <div class="lg:col-span-2 lg:py-12">
-        <p class="max-w-xl text-xl">
-          Use the form to add a new recipe to feed your Hungry Guys. Be sure to include some notes in the comments section: what you liked, what you changed or modified, etc. 
-           Let's eat!
-        </p>
-      </div>
+          <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+              <div class="lg:col-span-2 lg:py-12">
+                <p class="max-w-xl text-xl">
+                Use the form to add a new recipe to feed your Hungry Guys. Be sure to include some notes in the comments section: what you liked, what you changed or modified, etc. Let's eat!
+                </p>
+            </div>
 
       <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
         <form onSubmit={handleSubmit} action="" class="space-y-4">
