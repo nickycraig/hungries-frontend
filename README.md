@@ -35,4 +35,4 @@ The app is available for anyone to view and contribute to at this time by visiti
 
 ## Contribution Guidelines
 
-In the future, user login/auth would be desired feature, as well as any improvements to the look and styling of the app. It would also be helpful to have a way for the database of recipes to be searchable by keywords, maybe a main ingredient, or type of cuisine, or dietary restrictions like vegan or gluten-free.
+In the future, user login/auth would be desired feature, as well as any improvements to the look and styling of the app. It would also be helpful to have a way for the database of recipes to be searchable by keywords, maybe a main ingredient, or type of cuisine, or dietary restrictions like vegan or gluten-free. Is there a way to allow users to upload their own photo of the recipe after they've made it? On the delete page, it would be great to show the image of the dish again, and also refer to the recipe by name. I would also love to make the link to the recipe open in a new window.
