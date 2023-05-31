@@ -6,16 +6,16 @@ My group of friends, aka the Hungry Guys, loves to get together for dinner and p
 ## Screenshots
 
 Home page:
-https://github.com/nickycraig/hungries-frontend/assets/122757259/44484678-e4f6-4eab-8675-c0c0afefc494
+![Screen Shot 2023-05-31 at 3 45 54 PM](https://github.com/nickycraig/hungries-frontend/assets/122757259/44484678-e4f6-4eab-8675-c0c0afefc494)
 
 Index page form:
-https://github.com/nickycraig/hungries-frontend/assets/122757259/61c08d65-bb29-410b-b57c-730e77baacd6
+![Screen Shot 2023-05-31 at 3 46 25 PM](https://github.com/nickycraig/hungries-frontend/assets/122757259/61c08d65-bb29-410b-b57c-730e77baacd6)
 
 Recipe list:
-https://github.com/nickycraig/hungries-frontend/assets/122757259/b923e605-2ffc-4d43-9a7c-1439b58d8ef5
+![Screen Shot 2023-05-31 at 3 46 56 PM](https://github.com/nickycraig/hungries-frontend/assets/122757259/b923e605-2ffc-4d43-9a7c-1439b58d8ef5)
 
 Recipe show page:
-https://github.com/nickycraig/hungries-frontend/assets/122757259/15124bb4-ff36-4ab8-a033-211e0cb7214a
+![Screen Shot 2023-05-31 at 3 47 46 PM](https://github.com/nickycraig/hungries-frontend/assets/122757259/15124bb4-ff36-4ab8-a033-211e0cb7214a)
 
 
 ## Technologies Used
