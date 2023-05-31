@@ -47,22 +47,57 @@ function RecipeEdit() {
 
     function loaded() {
         return(
-            <>
-                <h2>Editing {recipe.name}</h2>
-                <form onSubmit={handleSubmit}>
-                    Recipe <input type="text" value={recipe.name} name="name" id="name" onChange={handleChange} />
-                    <br/>
-                    Type <input type="text" value={recipe.type} name="type" id="type" onChange={handleChange} />
-                    <br/>
-                    Image <input type="text" value={recipe.image} name="image" id="image" onChange={handleChange} />
-                    <br/>
-                    Cuisine <input type="text" value={recipe.cuisine} name="cuisine" id="cuisine" onChange={handleChange} />
-                    <br/>
-                    Comments <input type="text" value={recipe.comments} name="comments" id="comments" onChange={handleChange} />
-                    <br/>
-                    Recipe Link <input type="text" value={recipe.recipeLink} name="recipeLink" id="recipeLink" onChange={handleChange} />
-                </form>
-            </>
+            <section class="bg-gray-100">
+              <h2 class="text-2xl pt-8">Editing "{recipe.name}"</h2>
+              <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+                <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
+                    <form onSubmit={handleSubmit} action="" class="space-y-4">
+                        <div>
+                            Recipe
+                            <input class="w-full rounded-lg border-gray-200 p-3 text-sm" type="text" value={recipe.name} name="name" id="name" onChange={handleChange} />
+                        </div>
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div>
+                                Cuisine 
+                                <input class="w-full rounded-lg border-gray-200 p-3 text-sm" type="text" value={recipe.cuisine} name="cuisine" id="cuisine" onChange={handleChange} />
+                            </div>
+                            <div>
+                                Type
+                                    <select
+                                    class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                    placeholder="recipe type"
+                                    id="type"
+                                    onChange={handleChange}>
+                                        <option value="soup">Soup</option>
+                                        <option value="salad">Salad</option>
+                                        <option value="entree">Entree</option>
+                                        <option value="side dish">Side Dish</option>
+                                        <option value="appetizer">Appetizer</option>
+                                        <option value="dessert">Dessert</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div>
+                            Comments <input class="w-full rounded-lg border-gray-200 p-3 text-sm" type="text" value={recipe.comments} name="comments" id="comments" onChange={handleChange} />
+                        </div>
+                        <div>
+                            Image <input class="w-full rounded-lg border-gray-200 p-3 text-sm" type="text" value={recipe.image} name="image" id="image" onChange={handleChange} />
+                        </div>
+                        <div>
+                            Recipe Link <input class="w-full rounded-lg border-gray-200 p-3 text-sm" type="text" value={recipe.recipeLink} name="recipeLink" id="recipeLink" onChange={handleChange} />
+                        </div>
+                        <div class="mt-4">
+                            <button
+                            type="submit"
+                            class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
+                            >
+                            Submit Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </section>
 
         )
     }

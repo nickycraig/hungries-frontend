@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Header () {
     return(
         <>
-            <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+            <nav className="flex items-center justify-between flex-wrap bg-light bg-cyan-200 p-6">
                 <Link to='/'>
                     <h2 className='text-2xl'>Home</h2>
                 </Link>

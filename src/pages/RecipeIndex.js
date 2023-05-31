@@ -30,8 +30,8 @@ function RecipeIndex () {
   
     function loaded() {
         return(
-            <div class="grid grid-rows-2 grid-flow-col gap-4">
-                <div>
+            <div class="grid grid-rows-2 grid-flow-col gap-4 pt-8 pb-8">
+                <div class="pb-12">
                     <h2 className='text-2xl'>Soups</h2>
                         {recipes.filter(recipe => recipe.type === "soup").map((recipe, idx) => {
                             return(
@@ -43,7 +43,7 @@ function RecipeIndex () {
                             )
                         } )}
                 </div> 
-                <div>
+                <div class="pb-12">
                     <h2 className='text-2xl'>Salads</h2>
                         {recipes.filter(recipe => recipe.type === "salad").map((recipe, idx) => {
                             return(
@@ -55,7 +55,7 @@ function RecipeIndex () {
                             )
                         } )}
                 </div>
-                <div>
+                <div class="pb-12">
                     <h2 className='text-2xl'>Entrees</h2>
                         {recipes.filter(recipe => recipe.type === "entree").map((recipe, idx) => {
                             return(
@@ -140,7 +140,7 @@ function RecipeIndex () {
                 <p class="max-w-xl text-xl">
                 Use the form to add a new recipe to feed your Hungry Guys. Be sure to include some notes in the comments section: what you liked, what you changed or modified, etc. Let's eat!
                 </p>
-            </div>
+              </div>
 
       <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
         <form onSubmit={handleSubmit} action="" class="space-y-4">
