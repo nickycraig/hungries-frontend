@@ -11,11 +11,11 @@ function RecipeShow () {
 
     function recipeLoaded() {
         return(
-            <>
-                <h1 className="text-3xl mt-4">{recipe.name}</h1>
-                <h4 class='text-xl mb-4'>({recipe.cuisine.join(', ')})</h4>
+            <div class="bg-gray-100">
+                <h1 className="text-3xl pt-4">{recipe.name}</h1>
+                <h4 class='text-xl pb-4'>({recipe.cuisine.join(', ')})</h4>
                 <div className="flex flex-row justify-center">
-                    <div>
+                    <div class="pb-6">
                         <img src={recipe.image} alt='recipe' />
                     </div>
                     <div class='pl-4'>
@@ -44,7 +44,7 @@ function RecipeShow () {
                         </div>
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 

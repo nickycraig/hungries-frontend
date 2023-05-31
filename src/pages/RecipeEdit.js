@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router';
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 function RecipeEdit() {
     const { recipeId } = useParams();
@@ -66,6 +67,7 @@ function RecipeEdit() {
                                     <select
                                     class="w-full rounded-lg border-gray-200 p-3 text-sm"
                                     placeholder="recipe type"
+                                    name="type"
                                     id="type"
                                     onChange={handleChange}>
                                         <option value="soup">Soup</option>
@@ -87,12 +89,14 @@ function RecipeEdit() {
                             Recipe Link <input class="w-full rounded-lg border-gray-200 p-3 text-sm" type="text" value={recipe.recipeLink} name="recipeLink" id="recipeLink" onChange={handleChange} />
                         </div>
                         <div class="mt-4">
+                            <Link to='/recipes'>
                             <button
                             type="submit"
                             class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
                             >
                             Submit Changes
                             </button>
+                            </Link>
                         </div>
                     </form>
                 </div>

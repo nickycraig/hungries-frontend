@@ -143,13 +143,14 @@ function RecipeIndex () {
               </div>
 
       <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-        <form onSubmit={handleSubmit} action="" class="space-y-4">
+        <form onSubmit={handleSubmit} class="space-y-4">
           <div>
             <label class="sr-only" for="name">Recipe</label>
             <input
               class="w-full rounded-lg border-gray-200 p-3 text-sm"
               placeholder="name of recipe"
               type="text"
+              name="name"
               id="name"
               onChange={handleChange} 
             />
@@ -161,6 +162,7 @@ function RecipeIndex () {
               <input
                 class="w-full rounded-lg border-gray-200 p-3 text-sm"
                 placeholder="chinese, vegan, etc."
+                name="cuisine"
                 type="text"
                 id="cuisine"
                 onChange={handleChange}
@@ -171,9 +173,11 @@ function RecipeIndex () {
               <label class="sr-only" for="type">Type</label>
               <select
                 class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                placeholder="recipe type"
+                placeholder="type of dish"
+                name="type"
                 id="type"
                 onChange={handleChange}>
+                    <option value="" selected disabled>type of dish</option>
                     <option value="soup">Soup</option>
                     <option value="salad">Salad</option>
                     <option value="entree">Entree</option>
@@ -190,6 +194,7 @@ function RecipeIndex () {
               class="w-full rounded-lg border-gray-200 p-3 text-sm"
               placeholder="add comments here"
               rows="4"
+              name="comments"
               id="comments"
               onChange={handleChange}
             ></textarea>
@@ -200,6 +205,7 @@ function RecipeIndex () {
             <input
               class="w-full rounded-lg border-gray-200 p-3 text-sm"
               placeholder="add image URL"
+              name="image"
               type="text"
               id="image"
               onChange={handleChange} 
@@ -210,6 +216,7 @@ function RecipeIndex () {
             <input
               class="w-full rounded-lg border-gray-200 p-3 text-sm"
               placeholder="add recipe URL"
+              name="recipeLink"
               type="text"
               id="recipeLink"
               onChange={handleChange} 
@@ -229,7 +236,8 @@ function RecipeIndex () {
   </div>
   {recipes.length ? loaded(recipes) : <h2>Loading...</h2>}
 </section>
-        // <section class="bg-gray-100"> 
+        // // <section class="bg-gray-100"> 
+        // <>
         //     <form onSubmit={handleSubmit}>
         //         <label for="name">Recipe </label>
         //         <input type="text" name="name" id="name" onChange={handleChange} placeholder="Name of recipe"/>
@@ -259,7 +267,7 @@ function RecipeIndex () {
         //         <button>Add new recipe</button>
         //     </form>
         //     {recipes.length ? loaded(recipes) : <h2>Loading...</h2>}
-        // </section>
+        // // </>
     )
 }
 
